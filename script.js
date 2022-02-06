@@ -23,6 +23,7 @@ const getRandomQuotes = async () => {
     const data = await response.json();
     return data.message;
   } catch (error) {
+    // quotesContainer.textContent = "Failed to fetch Quote";
     console.log(error);
   } finally {
     spinner.classList.remove("active");
@@ -47,5 +48,5 @@ function setTweetButton(quote) {
     "href",
     `https://twitter.com/share?text=${quote} - Auraqule`
   );
-  console.log(quote, tweetBtn);
+  //   console.log(quote, tweetBtn);
 }
